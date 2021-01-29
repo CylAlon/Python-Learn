@@ -4,6 +4,9 @@ sudo server mysql start 打开数据库
 ps-ajs|grep mysql 检测
 
 
+
+
+
 NOT NULL 非空约束
 PRIMARY KEY 主键
 UNIQUE KEY 唯一约束
