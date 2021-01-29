@@ -8,7 +8,7 @@ import socket
 udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # 发送数据
-udp_socket.sendto("你好".encode('gbk'), ("192.168.125.1", 8080))
+udp_socket.sendto("你好".encode('gbk'), ("192.168.168.1", 8080))
 # 接收数据 （二进制）
 udp_get_date = udp_socket.recvfrom(1024)  # 该方法会造成程序阻塞 即一直等待 当接收到数据 则接触阻塞
 
