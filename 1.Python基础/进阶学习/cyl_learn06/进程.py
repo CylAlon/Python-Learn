@@ -1,8 +1,14 @@
+'''
+Descripttion: 
+Author: Cyl
+Date: 2021-01-29 19:42:36
+Software: Visual Studio Code
+'''
 # -*- coding: utf-8 -*-
 # @Author  : Cyl
 # @Time    : 2021/1/3 3:01
 # @File    : 进程.py
-# @Software: PyCharm
+# @Software: PyCharm 
 """
 FileSpec:
 
@@ -20,6 +26,7 @@ def task2():
     for i in range(10):
         print(2)
         time.sleep(0.3)
+        
 
 
 
