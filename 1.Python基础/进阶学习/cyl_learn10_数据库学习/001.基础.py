@@ -92,6 +92,7 @@ create table students(
     select * from students where name='张三';
     select id as di,age from students where id = 2;
 
+
 """
 
 
