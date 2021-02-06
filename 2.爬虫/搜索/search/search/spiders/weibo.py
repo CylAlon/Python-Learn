@@ -11,6 +11,7 @@ import re
 from search.items import SearchItem
 import time
 import datetime
+import traceback
 
 class WeiboSpider(scrapy.Spider):
     name = 'weibo'
@@ -18,29 +19,25 @@ class WeiboSpider(scrapy.Spider):
     start_urls = ['https://s.weibo.com/']
     r = redis.Redis(connection_pool=pool, decode_responses=True)
     find_name = r.get('find_name')
-    atime = 7
+    atime = 1
     cookies = {}
     url1 = {}
 
     def start_requests(self):
         temp = COOKIE
         ur = self.start_urls[0]
-        today = datetime.date.today()
-        # 昨天时间
-        yesterday = today - datetime.timedelta(days=self.atime)
-        star = int(time.mktime(time.strptime(str(yesterday), '%Y-%m-%d')))
 
-        times = datetime.datetime.fromtimestamp(star)
-        tims = str(times)
-        sy = tims.split(' ')[0]
+        mday = time.time()
+        sjc = mday-(60*60*24)*self.atime
+        yday = time.localtime(sjc)
+        sy = str(time.strftime('%Y-%m-%d',yday))
 
         article = ['article','&Refer=weibo_article'] # 文章
-        video = ['weibo','&xsort=hot&suball=1&timescope=custom:'+sy+':&Refer=g'] #视频
-
+        video = ['weibo','&typeall=1&suball=1&timescope=custom:'+sy+':&Refer=SWeibo_box'] #视频
+        
         self.url1 = {
             'article':ur+article[0]+'?q='+self.find_name+article[1],
             'video':ur+video[0]+'?q='+self.find_name+video[1],
-            # 'topic':ur+topic[0]+'?q='+self.find_name+topic[1],
         }
         self.cookies = {data.split('=')[0]:data.split('=')[-1] for data in temp.split(';')}
         li0 = []
@@ -76,8 +73,18 @@ class WeiboSpider(scrapy.Spider):
                     
                     tt = re.findall(r'\w+',str(tm))
                     u = ''
+                    fg = 0
                     for p in tt:
-                        u = u + p+'-'
+                        u = u + p
+                        if fg ==0:
+                            if len(tt)>2:
+                                u = u+' '
+                            else:
+                                u = u+':'
+                        elif fg ==1:
+                            if len(tt)>2:
+                                u = u+':'
+                        fg = fg+1
                     bas[1] = u
 
                     card_url = 'https:'+card_url
@@ -101,8 +108,10 @@ class WeiboSpider(scrapy.Spider):
                 yield item
             # # 翻页
             pag = response.xpath('//*[@class="s-scroll"]/li')
-            moment= response.xpath('//*[@class="cur"]/a/text()').re('第(.*?)页')[0]
-
+            # print('-----------------')
+            moment= response.xpath('//*[@class="cur"]/a/text()').re('第(.*?)页')
+            # print(moment)
+            moment = moment[0]
             if int(moment)<len(pag):
                 ur = response.xpath('//*[@class="cur"]/a/@href').extract_first()
                 d = re.compile('/(.*?)page=.*?').findall(ur)
@@ -117,9 +126,10 @@ class WeiboSpider(scrapy.Spider):
                     # print('*************-------------',no,self.url1[no])
                     yield scrapy.Request(url=self.url1[no],callback=self.parse,cookies=self.cookies,meta={'tag':tag,'num_flag':num_flag+1})
                 except  Exception as e:
-                    print('爬虫即将结束')
+                    print('爬取完毕')
         except Exception as ex:
-            print('哎呀!!!好像获取内容无法访问,请重新允许代码')
+            print('哎呀!!!好像获取内容无法访问,请重新允许代码-----获取当前页面时,内容为空,造成了下表越界-----以下是异常信息')
+            traceback.print_exc()
             self.crawler.engine.close_spider(self, '退出爬虫')
 
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        a,a:hover{
+            text-decoration:none;
+            color:blue;
+        }
+        .tb{
+            width:100%;
+        }
+        .tb,td,th{
+            border: 1px solid #73b4e7;
+            border-width:1px;
+            }
+        th:nth-child(1),td:nth-child(1){
+            width:5%;
+            text-align:center;
+        }
+        th:nth-child(2),td:nth-child(2),
+        th:nth-child(5),td:nth-child(5),
+        th:nth-child(6),td:nth-child(6){
+            width:10%;
+            text-align:center;
+        }
+        th:nth-child(4),td:nth-child(4){
+            width:15%;
+            text-align:center;
+        }
+        th{
+            background-color:#96C7ED;
+        }
+    </style>
+</head>
+<body>
+    <table class='tb'>
+        <tr class='tx'>
+            <th>index</th>
+            <th>name</th>
+            <th>title</th>
+            <th>time</th>
+            <th>type</th>
+            <th>url</th>
+        </tr>

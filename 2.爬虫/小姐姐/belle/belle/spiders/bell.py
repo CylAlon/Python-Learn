@@ -31,13 +31,13 @@ class BellSpider(scrapy.Spider):
         for va in CATALOGUE:
             print(va,end=',')
         print('')
-        inpt = input('请输入你要下载图片的类型--[多个类型用中文逗号隔开]-（不输入默认全下载）：')
+        inpt = input('请输入你要下载图片的类型：')
         lis = []
         while True:
             inpt = inpt.split('，')
             for li in inpt:
                 if (li not in CATALOGUE) and (li != ''):
-                    inpt = input('目标不存在，请重新输入你要下载图片的类型--[多个类型用中文逗号隔开]-（不输入默认全下载）：')
+                    inpt = input('目标不存在，请重新输入你要下载图片的类型:')
                     lis.clear()
                     break
                 lis.append(li)
