@@ -6,12 +6,13 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+
 import utils
 from settings import r
 
-class FutunnScrapyPipeline:
+class EastmoneyPipeline:
     def __init__(self):
-        self.file = utils.writeFile('futu')
+        self.file = utils.writeFile('east')
 
     def process_item(self, item, spider):
         item = dict(item)
@@ -25,3 +26,4 @@ class FutunnScrapyPipeline:
 
         r.delete('index')
         r.delete('find_name')
+
