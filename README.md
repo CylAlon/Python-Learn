@@ -15,3 +15,4 @@ This is a repository of things to learn about Python, from Python basics to AI.U
 #### [2.2.8 东方财富搜索](2.爬虫/东方财富搜索)
 
 #### [2.2.9 翻译](2.爬虫/翻译)
+        基于resquests
