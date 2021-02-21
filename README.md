@@ -13,4 +13,4 @@ This is a repository of things to learn about Python, from Python basics to AI.U
 #### [2.2.6 老虎搜索](2.爬虫/老虎搜索)
 #### [2.2.7 B站搜索](2.爬虫/B站搜索)
 
-#### [2.2.8 雪球搜索](2.爬虫/翻译)
+#### [2.2.8 翻译](2.爬虫/翻译)
