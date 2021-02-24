@@ -1,9 +1,5 @@
 # -*- coding:utf-8 -*-
-'''
-Descripttion:
-Author: Cyl
-Date: 2021-02-06 17:41:31
-'''
+
 from scrapy import cmdline
 from settings import r
 import redis

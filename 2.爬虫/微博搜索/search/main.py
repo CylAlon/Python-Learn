@@ -1,9 +1,5 @@
 # -*- coding:utf-8 -*-
-'''
-Descripttion: 
-Author: Cyl
-Date: 2021-02-05 11:30:56
-'''
+
 
 from scrapy import cmdline
 from search.settings import pool 
