@@ -15,7 +15,7 @@ def get_js_data(js_data,method,*ags):
 if __name__ == '__main__':
     flag = input('请输入中转英还是英转中--（中转英输入0，反之输入1）')
     query = input('请输入需要翻译的内容：')
-    js_data = get_js_file('youdao.js')
+    js_data = get_js_file('baidu.js')
     url = 'https://fanyi.baidu.com/v2transapi?from=zh&to=en'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36',
