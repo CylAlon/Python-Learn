@@ -16,9 +16,6 @@ r.set('find_name',find_name)
 # r.set('find_id',find_id)
 
 print(f'{find_name}----正在爬取数据.....(外网较慢)')
-print('**********************')
-print('***请不要关闭浏览器***')
-print('**********************')
 # 油管爬虫
 cmdline.execute(('scrapy crawl youtube --nolog').split())
 

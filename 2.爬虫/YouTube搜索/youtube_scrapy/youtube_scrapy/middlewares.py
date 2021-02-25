@@ -21,12 +21,14 @@ class UserAgentMiddleware(object):
 
 class ChromeMiddleware(object):
     def __init__(self):
-        self.driver = webdriver.Chrome()
-        self.driver.set_window_size(500, 500)
+        # self.driver = webdriver.Chrome() 
+        # self.driver.set_window_size(500, 500)
+        self.options = Options()
+        self.options.headless = True
+        self.driver = webdriver.Chrome(options=self.options)
+        
         time.sleep(1)
-        self.chorme_options = Options()
-        self.chorme_options.add_argument("--headless")
-        self.chorme_options.add_argument("--disable-gpu")
+        
 
     def process_request(self, request, spider):
         self.driver.get(request.url)

@@ -56,11 +56,11 @@ def writeFile(spidername = ''):
     if not os.path.exists(path):
         os.makedirs(path)
     file_path = path+'/'+getFindName()+'_'+spidername+'.html'
-    with open(pa+'/template.html','r') as f:
+    with open(pa+'/template.html','r',encoding='utf-8') as f:
             ht = f.read()
-    with open(file_path,'w') as f:
+    with open(file_path,'w',encoding='utf-8') as f:
         f.write(ht)
-    nfile = open(file_path,'a+')
+    nfile = open(file_path,'a+',encoding='utf-8')
     return nfile
 
 def addFile(file,item):

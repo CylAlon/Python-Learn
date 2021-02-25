@@ -15,7 +15,7 @@ This is a repository of things to learn about Python, from Python basics to AI.U
 #### [2.2.7 B站搜索](2.爬虫/B站搜索)
 #### [2.2.8 东方财富搜索](2.爬虫/东方财富搜索)
 #### [2.2.9 同花顺财经搜索](2.爬虫/同花顺搜索)
-#### [2.2.10 油管(YouTube)搜索](2.爬虫/油管(YouTube)搜索)
+#### [2.2.10 YouTube搜索](2.爬虫/YouTube搜索)
         使用了selenium渲染
 #### [2.2.11 翻译](2.爬虫/翻译)
         基于resquests
