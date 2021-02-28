@@ -1,0 +1,45 @@
+.xzkc1 {
+
+    /*display: block;*/
+    width: 99%;
+    height: 34px;
+    vertical-align: middle;
+    padding: 6px 12px;
+    margin-left: 5px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.xzkc2 {
+
+    /*display: block;*/
+    width: 49%;
+    height: 34px;
+    vertical-align: middle;
+    padding: 6px 12px;
+    margin-left: 5px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#t1{
+    font-size: 16px;
+    font-family: 微软雅黑;
+
+}
+
+#imtl{
+    width: 500px;
+    height: 500px;
+    margin: 10px auto;
+    /*border: 1px red solid;*/
+}
+

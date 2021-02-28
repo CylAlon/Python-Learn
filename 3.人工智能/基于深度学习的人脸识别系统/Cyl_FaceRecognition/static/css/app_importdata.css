@@ -1,0 +1,204 @@
+
+.app_import_add {
+
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    padding-top: 20px;
+    /*border: red 1px solid;*/
+
+}
+
+.myTable {
+    width: 100%;
+    text-align: left;
+    background-color: lemonchiffon;
+    border-collapse: collapse;
+}
+
+.myTable th {
+    background-color: goldenrod;
+    color: white;
+}
+
+.myTable td,
+.myTable th {
+    padding: 10px;
+    width: 20%;
+    border: 1px solid goldenrod;
+}
+
+.bu_fi {
+    padding-top: 20px;
+}
+
+.fc {
+    width: 100%;
+    height: 630px;
+
+    position: fixed;
+    display: none;
+    z-index: 0;
+
+    /*background: #1a1a1a;*/
+}
+
+.nfc {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-left: 30%;
+    /*border: 1px red solid;*/
+    border: 3px white solid;
+    background: whitesmoke;
+    border-radius: 30px;
+    opacity: 0.8;
+}
+
+#tc {
+    width: 100%;
+    height: 50px;
+}
+
+#fo {
+    padding-top: 20px;
+    width: 55%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+
+#for {
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 60px 80px 60px;
+}
+
+#fo span {
+    font-size: 16px;
+    font-family: 微软雅黑;
+    margin-left: 40px;
+}
+
+.xlcd {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#ff {
+    padding: 10px 0 10px 10px;
+}
+
+.anfc {
+    height: 400px;
+}
+
+.afc {
+    width: 100%;
+    height: 630px;
+
+    position: fixed;
+    display: none;
+    z-index: 0;
+}
+
+/*以下是face_gather的css*/
+
+#import_camera {
+    width: 100%;
+    height: 630px;
+    padding-top: 40px;
+    border: 2px #fff solid;
+    /*position: fixed;*/
+}
+
+#import_camera #iframe_div {
+    width: 50%;
+    height: 500px;
+    float: left;
+    /*margin-left: 20px;*/
+    /*border: green 1px solid;*/
+}
+
+#import_camera #ldi,
+#import_camera #rdi {
+    width: 24%;
+    height: 500px;
+    float: left;
+
+    /*border: blue 1px solid;*/
+}
+
+#import_camera iframe {
+    width: 650px;
+    height: 490px;
+    /*border: red 1px solid;*/
+    margin: 0 auto;
+}
+
+#imgface {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+/*头像背景*/
+#face_bgm {
+    width: 100%;
+    height: 100%;
+    background-size:100% 100%;
+}
+
+#ldi h1, #ldi h2, #ldi h3 {
+    text-align: center;
+    font-family: 黑体;
+    font-size: 20px;
+}
+
+#bu {
+    text-align: center;
+
+}
+
+#errinf {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.stu_tab {
+    width: 100%;
+
+
+    border-collapse: collapse;
+}
+
+.stu_tab th {
+    background-color: floralwhite;
+    height: 20px;
+}
+
+.stu_tab th, .stu_tab td {
+    text-align: center;
+    border: 1px solid goldenrod;
+    height: 20px;
+}
+
+.stu_tab td {
+    font-size: 10px;
+    /*background-color: floralwhite;*/
+}
+
+.fenye {
+    text-align: center;
+    /*margin: 0 auto;*/
+}
+

@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>app_check</title>
+    <link rel="stylesheet" href="{% static 'css/app_check.css' %}">
+</head>
+<body>
+<br/><span style="font-family: 微软雅黑;font-size: 18px">修改考勤规则:</span>
+<div id="lb">
+    <form action="" method="post" id="forset">
+        {% csrf_token %}
+        <table id="tb">
+            <tr>
+                <th>出勤得分</th>
+                <td>
+                    <input type="text" name="attendance" id="attendance" value="{{ attendance }}">
+                </td>
+            </tr>
+            <tr>
+                <th>缺勤得分</th>
+                <td>
+                    <input type="text" name="absent" id="absent" value="{{ absent }}">
+                </td>
+            </tr>
+            <tr>
+                <th>迟到得分</th>
+                <td>
+                    <input type="text" name="late" id="late" value="{{ late }}">
+                </td>
+            </tr>
+            <tr>
+                <th>请假得分</th>
+                <td>
+                    <input type="text" name="leave" id="leave" value="{{ leave }}">
+                </td>
+            </tr>
+            <tr>
+                <th>缺勤最大次数</th>
+                <td>
+                    <input type="text" name="absent_number" id="absent_number" value="{{ absent_number }}">
+                </td>
+            </tr>
+            <tr>
+                <th>迟到最大次数</th>
+                <td>
+                    <input type="text" name="late_number" id="late_number" value="{{ late_number }}">
+                </td>
+            </tr>
+
+        </table>
+
+        <div id="aniu">
+            <span style="font-size: 16px;font-family: 微软雅黑;" id="er">&nbsp;</span><br/><br/>
+            <button class="btn btn-primary" type="button" id="xgsz">点击修改设置</button>
+        </div>
+    </form>
+</div>
+
+
+<script src="{% static 'js/app_set_check.js' %}"></script>
+</body>
+</html>

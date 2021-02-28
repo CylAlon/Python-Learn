@@ -1,0 +1,197 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'css/app_importdata.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app_check.css' %}">
+    {#    <link rel="stylesheet" href="{% static 'css/jquery.searchableSelect.css'%}">#}
+
+
+</head>
+<body>
+<div id="ffc">
+    <div class="nfc1">
+
+        <form action="" method="post" id="for1">
+            {% csrf_token %}
+            <span id="qqzt">签到状态</span><br/><br/>
+
+            学号：<span id="sstid"></span>&nbsp;&nbsp;&nbsp;&nbsp;状态：<span id="qdzt"></span><br/><br/>
+
+            <div class="col-md-12">
+                <div class="form-group" id="ss">
+                    <button type="submit" class="btn btn-primary" id="cq">出勤</button>
+                    <button type="submit" class="btn btn-primary" id="qq">缺勤</button>
+                    <button type="submit" class="btn btn-primary" id="qj">请假</button>
+                    <button type="submit" class="btn btn-primary" id="cd">迟到</button>
+                    <button type="submit" class="btn btn-primary" id="qdgb">关闭</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="import_camera">
+
+    <div id="ldi">
+        <div id="imgface">
+            <div id="face_bgm">
+
+            </div>
+        </div>
+        <br>
+        <h2 id="vah2"></h2>
+        <h3></h3>
+    </div>
+    <div id="iframe_div">
+
+        <iframe src="{{ ip }}" name="iframe"
+                scrolling="auto" content="IE=7; IE=9;IE=edge">
+        </iframe>
+    </div>
+    <div id="rdi">
+        <div id="fo">
+            <span>请选择信息</span><br/><br/>
+            <form action="" method="post">
+                {% csrf_token %}
+
+                <select class="xlcd s" id="se_1">
+
+                    <option selected="selected">请选择课程</option>
+
+                </select><br/>
+                <select class="xlcd d" id="se_2">
+                    <option selected="selected">请选择周数</option>
+
+                </select><br/>
+                <select class="xlcd" id="se_3">
+                    <option selected="selected">请选择周几</option>
+
+                </select><br/>
+                <select class="xlcd" id="se_4">
+                    <option selected="selected">请选择课数</option>
+
+                </select><br/>
+
+                <div id="bu">
+                    <button type="submit" class="btn btn-primary" id="chick_button">确定</button>
+                    <button class="btn btn-danger" type="button" id="qc_button">清除</button>
+
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+
+    <nav>
+        <div id="bu">
+            <button type="submit" class="btn btn-primary" id="kaoqin">签到</button>
+        </div>
+        <p id="errinf">&nbsp;</p>
+        {#        <ul class="pager">#}
+        {#            <li><a href="" id="kaoqin">签到</a></li>#}
+        {#            <p id="erran" style="color: red">&nbsp;</p>#}
+        {#        </ul>#}
+
+    </nav>
+</div>
+
+
+<div id="tabid">
+
+    <table class="stutb">
+        <tr>
+            <th>头像</th>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>班级</th>
+            <th>签到情况</th>
+            <th colspan ='4'>操作</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='qdx1 qdxq1'></td>
+            <td class='qdx1 qdxq2'></td>
+            <td class='qdx1 qdxq3'></td>
+            <td class='qdx1 qdxq4'></td>
+
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='qdx2 qdxq1'></td>
+            <td class='qdx2 qdxq2'></td>
+            <td class='qdx2 qdxq3'></td>
+            <td class='qdx2 qdxq4'></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='qdx3 qdxq1'></td>
+            <td class='qdx3 qdxq2'></td>
+            <td class='qdx3 qdxq3'></td>
+            <td class='qdx3 qdxq4'></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='qdx4 qdxq1'></td>
+            <td class='qdx4 qdxq2'></td>
+            <td class='qdx4 qdxq3'></td>
+            <td class='qdx4 qdxq4'></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class='qdx5 qdxq1'></td>
+            <td class='qdx5 qdxq2'></td>
+            <td class='qdx5 qdxq3'></td>
+            <td class='qdx5 qdxq4'></td>
+        </tr>
+
+    </table>
+    <nav aria-label="Page navigation" class="li_page">
+        <ul class="pagination">
+            <li>
+                <a href="javascript:void(0)" aria-label="Previous" id="lipage">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li><span style="background: #DDE2E1;"></span></li>
+            <li>
+                <a href="javascript:void(0)" aria-label="Next" id="ripage">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            <p id="errr">&nbsp;</p>
+        </ul>
+    </nav>
+</div>
+
+
+<script src="{% static 'js/app_check.js' %}"></script>
+
+</body>
+</html>

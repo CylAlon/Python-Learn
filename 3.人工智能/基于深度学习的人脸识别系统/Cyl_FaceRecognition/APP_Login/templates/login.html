@@ -1,0 +1,62 @@
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>uese_login</title>
+	<link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css"/>
+    <script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/csrf_token.js' %}"></script>
+    <script src="{% static 'js/menu_jquery.js' %}"></script>
+    <script src="{% static 'js/app_login.js' %}"></script>
+</head>
+<body>
+<div id="sf">
+    <div id="outdiv">
+        <div class="dec_div">
+            <div id="giflog">
+
+            </div>
+        </div>
+
+        <div class="dec_div">
+
+            <form id="login" action="{% url 'app_login:login' %}" method="post">
+                 {% csrf_token %}
+            <fieldset id="inputs">
+
+                    <h2 class="sign">Sign In</h2>
+                    <nav>
+
+                        <input type="text" name="username" placeholder="Username" value="{{ uname }}">
+                        <input type="password" name="userpassword" placeholder="Password" ><nav style="color: red;">{{ upad }}</nav>
+                        <input type="text" name="usercode" placeholder="验证码" /><nav style="color: red">{{ ucod }}</nav>
+
+                        <br>
+                        <a href="" id="coid" >
+                            <img src="{% static 'img/verification_code/yzmimg.jpg' %}" id="code" alt="验证码">
+                            <span style="font-size: 14px">看不清？请点击下一张</span></a>
+                    </nav>
+                    <div style="color: #CCC;font-size: 14px;padding: 10px">
+                        <input type="text" name="loginflag" placeholder="loginflag" value="login" style="display: none">
+                       <span> <label for="radio1">学生</label><input type="radio" name="radio" id="radio1" value="radio1" checked="checked" style="width: 40px;height: 12px" ></span>
+                        <span><label for="radio2">教师</label><input type="radio" name="radio" id="radio2" value="radio2" style="width: 40px;height: 12px"></span>
+                        <span><label for="radio3">管理员</label><input type="radio" name="radio" id="radio3" value="radio3" style="width: 40px;height: 12px"></span>
+                    </div>
+
+                    <div class="send-button">
+                            <input type="submit" value="Sign In" id="log">
+{#                            <button id="log">"Sign In"</button>#}
+                    </div>
+                    <a href="#">Forgot Password?</a>
+                    <a href="#" style="margin-left: 120px;">Register</a>
+                    <div class="clear"></div>
+            </fieldset>
+        </form>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

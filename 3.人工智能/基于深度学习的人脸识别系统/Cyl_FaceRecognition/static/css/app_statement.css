@@ -1,0 +1,209 @@
+#chxz{
+    margin-top: 10px;
+}
+
+#topsp{
+    width: 100%;
+    height: 20px;
+}
+
+#ti{
+    width: 100%;
+    height: 100px;
+    /*border: 2px red solid;*/
+}
+.bbxz {
+
+    /*display: block;*/
+    width: 90%;
+    height: 34px;
+    vertical-align: middle;
+    padding: 6px 12px;
+    margin-left: 5px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#kc1{
+  width: 98%;
+}
+
+#chxz #stbu {
+    /*text-align: center;*/
+    display:inline;
+
+}
+#stbut  {
+    /*display:inline;*/
+    text-align: center;
+    /*margin: 0 auto;*/
+    /*margin-left: 30px;*/
+
+}
+#stbut button{
+    margin-left: 40px;
+}
+.ti{
+    font-size: 16px;
+    font-family: 微软雅黑;
+
+}
+
+#showtb{
+    width: 100%;
+    height: 750px;
+    /*border: 2px blue solid;*/
+}
+#showtb #anniu{
+    width: 100%;
+    height: 40px;
+    /*border: 2px red solid;*/
+}
+
+#stb{
+    width: 100%;
+    height: 650px;
+    /*border: 2px red solid;*/
+    margin-top: 10px;
+}
+
+
+#stb .kqtab{
+    width: 90%;
+    margin: 0 auto;
+}
+#stb tr th:nth-child(1),
+#stb tr th:nth-child(2),
+#stb tr th:nth-child(4){
+    width: 10%;
+}
+#stb tr th:nth-child(5),
+#stb tr th:nth-child(6),
+#stb tr th:nth-child(7),
+#stb tr th:nth-child(8){
+    width: 12%;
+}
+#stb tr th:nth-child(3){
+    width: 20%;
+}
+
+
+
+#stb .kqtab tr th{
+    height: 30px;
+}
+#stb .kqtab tr td{
+    height: 40px;
+}
+#stb .kqtab th {
+    background-color: floralwhite;
+    /*height: 20px;*/
+}
+
+#stb .kqtab th, #stb .kqtab td {
+    text-align: center;
+    border: 1px solid goldenrod;
+    /*height: 20px;*/
+}
+.sli_page {
+    text-align: center;
+}
+/*.sli_page li{*/
+/*    margin-left: 20px;*/
+/*}*/
+/******************************************/
+#immg{
+    width: 100%;
+    height: 800px;
+    border: 2px red solid;
+}
+
+#tbbu {
+    margin-top: 20px;
+    text-align: center;
+}
+#tbbu1 {
+    margin-top: 20px;
+    text-align: center;
+}
+.tbu{
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    padding-top: 7px;
+    border-radius:8px;
+    background: green;
+    margin: 0 auto;
+}
+.tbu a{
+    color: white;
+text-decoration: none;
+    /*background: blue;*/
+}
+.tbu:hover{
+    /*color: white;*/
+    background: #0B8052;
+
+}
+
+.tuli{
+    width: 400px;
+    height: 400px;
+    float: left;
+}
+
+/************************************************/
+
+
+#stbc{
+    width: 100%;
+    height: 650px;
+    /*border: 2px red solid;*/
+    margin-top: 10px;
+}
+
+
+#stbc .kqtab{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#stbc tr th:nth-child(1){
+    width: 20%;
+}
+#stbc tr th:nth-child(2),
+#stbc tr th:nth-child(3),
+#stbc tr th:nth-child(4),
+#stbc tr th:nth-child(5),
+#stbc tr th:nth-child(6),
+#stbc tr th:nth-child(7),
+#stbc tr th:nth-child(8){
+    width: 10%;
+}
+
+
+
+#stbc .kqtab tr th{
+    height: 30px;
+}
+#stbc .kqtab tr td{
+    height: 40px;
+}
+#stbc .kqtab th {
+    background-color: floralwhite;
+    /*height: 20px;*/
+}
+
+#stbc .kqtab th, #stbc .kqtab td {
+    text-align: center;
+    border: 1px solid goldenrod;
+    /*height: 20px;*/
+}
+
+
+

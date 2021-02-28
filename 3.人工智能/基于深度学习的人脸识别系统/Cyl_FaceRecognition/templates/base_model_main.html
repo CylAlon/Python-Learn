@@ -1,0 +1,293 @@
+{% extends 'base_model.html' %}
+{% load static %}
+
+{% block ext_css %}
+    {{ block.super }}
+{% endblock %}
+
+{% block header %}
+    {{ block.super }}
+    <div class="nfs">
+
+        <form action="" method="post" id="fore">
+            {% csrf_token %}
+            <span>修改账号和密码</span><br/><br/><br/>
+            账号：<input type="text" name="setzh" id="setzh" value="{{ data.list }}" readonly="readonly"><br/><br/>
+            密码：<input type="text" name="sstmm" id="sstmm"><br/><br/>
+            确认密码：<input type="text" name="qrsstmm" id="qrsstmm"><br/><br/>
+
+            <div class="col-md-12">
+                <div class="form-group" id="ffe">
+                    <button type="submit" class="btn btn-primary" id="xg_button">修改</button>
+                    <button class="btn btn-danger" type="button" id="tc_button">关闭</button><br/>
+                    <span id="xgfl3">&nbsp;</span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <nav id="nav_header">
+        <div class="header_div  nav_hadder_h nav_hadder_w">
+            <div class="nav_divide nav_hadder_h">
+                <div class="header_name nav_hadder_h">
+                    <i class="glyphicon glyphicon-camera"></i>
+                    <a href="">基于深度学习的人脸识别考勤系统设计与开发</a>
+                </div>
+            </div>
+            <div class="nav_divide nav_hadder_h">
+                <div id="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="{% url 'app_login:loginout' %}"><i class="glyphicon glyphicon-off"></i></a>
+                            </li>
+                            {#                            <li><a href="#">关于</a></li>#}
+                            <li><a href="#maodian"><i class="glyphicon glyphicon-earphone"></i></a></li>
+                            <li><a href="javascript:void(0)" id="set_clic2"><i class="glyphicon glyphicon-cog"></i></a></li>
+                            {#                            <li><a href="#"><i class="glyphicon glyphicon-envelope"></i></a></li>#}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+{% endblock %}
+
+{% block comment %}
+    {{ block.super }}
+    <nav>
+        <div class="comment_div  nav_hadder_h nav_hadder_w">
+
+            <div class="menu_bar">
+
+                <div class="menu_heard">
+                    <div class="menu_heard_img_div">
+                        <img src="{% static  img_path %}" alt="" class="img_css">
+                    </div>
+                    <div class="user_inf">
+                        <h1>{{ uname }}</h1>
+                        <p>学号：{{ unum }}</p>
+                    </div>
+
+                </div>
+
+                <div class="menus_div ">
+                    <div id="menus_list_one">
+                        <ul>
+                            <li>
+                                <a href="{% url 'app_login:welcome' %}" id="a0" class="cl">
+                                    <span class="span1"><i class="glyphicon glyphicon-home"></i></span><span
+                                        class="span2">主页</span>
+                                </a>
+                            </li>
+
+                            {#                            <li>#}
+                            {#                                <a href="javascript:void(0)" id="a1" class="cl">#}
+                            {#                                    <span><i class="glyphicon glyphicon-folder-open"></i></span><span>学生信息</span>#}
+                            {#                                    <span id="rota1"> > </span>#}
+                            {#                                    <div id="hidden1">#}
+                            {#                                        <ul>#}
+                            {#                                            <li>#}
+                            {#                                                <a href=""><span>#}
+                            {#                                                    <i class="glyphicon glyphicon-star-empty"></i></span><span>个人信息</span>#}
+                            {#                                                </a>#}
+                            {#                                            </li>#}
+                            {#                                            <li>#}
+                            {#                                                <a href=""><span>#}
+                            {#                                                    <i class="glyphicon glyphicon-star-empty"></i></span><span>班级信息</span>#}
+                            {#                                                </a>#}
+                            {#                                            </li>#}
+                            {#                                        </ul>#}
+                            {#                                    </div>#}
+                            {##}
+                            {#                                </a>#}
+                            {#                            </li>#}
+                            <li>
+                                <a href="javascript:void(0)" id="a2" class="cl">
+                                    <span><i class="glyphicon glyphicon-sunglasses"></i></span><span>考勤管理</span>
+                                    <span id="rota2"> > </span>
+                                    <div id="hidden2">
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)" id="student_check"><span>
+                                                    <i class="glyphicon glyphicon-star-empty"></i></span><span>立即考勤</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" id="get_info_check_message"><span>
+                                                    <i class="glyphicon glyphicon-star-empty"></i></span><span>考勤规则</span>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <li><a href="javascript:void(0)" id="a3" class="cl">
+                                <span><i class="glyphicon glyphicon-text-color"></i></span><span>考勤信息</span>
+                                <span id="rota3"> > </span>
+                                <div id="hidden3">
+                                    <ul>
+                                        <li>
+                                            <a href="" id="get_person_message"><span>
+                                                <i class="glyphicon glyphicon-star-empty"></i></span><span>个人考勤信息</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" id="get_class_message"><span>
+                                                <i class="glyphicon glyphicon-star-empty"></i></span><span>班级考勤信息</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </a>
+
+                            </li>
+                            {#                            <li><a href="javascript:void(0)" id="a4" class="cl">#}
+                            {#                                <span><i class="glyphicon glyphicon-certificate"></i></span><span>缺勤信息</span>#}
+                            {#                                <span id="rota4"> > </span>#}
+                            {#                                <div id="hidden4">#}
+                            {#                                    <ul>#}
+                            {#                                        <li>#}
+                            {#                                            <a href=""><span>#}
+                            {#                                                <i class="glyphicon glyphicon-star-empty"></i></span><span>个人缺勤信息</span>#}
+                            {#                                            </a>#}
+                            {#                                        </li>#}
+                            {#                                        <li>#}
+                            {#                                            <a href=""><span>#}
+                            {#                                                <i class="glyphicon glyphicon-star-empty"></i></span><span>班级缺勤信息</span>#}
+                            {#                                            </a>#}
+                            {#                                        </li>#}
+                            {##}
+                            {#                                    </ul>#}
+                            {#                                </div>#}
+                            {#                            </a>#}
+                            {##}
+                            {#                            </li>#}
+                            {#                            <li>#}
+                            {#                                <a href="javascript:void(0)" id="a5" class="cl">#}
+                            {#                                    <span><i class="glyphicon glyphicon-th"></i></span><span>报表</span>#}
+                            {#                                    <span id="rota5"> > </span>#}
+                            {#                                    <div id="hidden5">#}
+                            {#                                        <ul>#}
+                            {#                                            <li>#}
+                            {#                                                <a href="" ><span>#}
+                            {#                                                    <i class="glyphicon glyphicon-star-empty" ></i></span><span>个人报表</span>#}
+                            {#                                                </a>#}
+                            {#                                            </li>#}
+                            {#                                            <li>#}
+                            {#                                                <a href=""><span>#}
+                            {#                                                    <i class="glyphicon glyphicon-star-empty"></i></span><span>班级报表</span>#}
+                            {#                                                </a>#}
+                            {#                                            </li>#}
+                            {##}
+                            {#                                        </ul>#}
+                            {#                                    </div>#}
+                            {#                                </a>#}
+                            {#                            </li>#}
+
+                            <li>
+                                <a href="javascript:void(0)" id="a6" class="cl">
+                                    <span><i class="glyphicon glyphicon-folder-open"></i></span><span>信息采集</span>
+                                    <span id="rota6"> > </span>
+                                    <div id="hidden6">
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)" id="get_info_base"><span>
+                                                    <i class="glyphicon glyphicon-star-empty"></i></span><span>基础数据导入</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" id="get_info_face"><span>
+                                                    <i class="glyphicon glyphicon-star-empty"></i></span><span>人脸数据采集</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </a>
+                            </li>
+
+                            {#                            <li><a href="">#}
+                            {#                                <span><i class="glyphicon glyphicon-calendar"></i></span><span>课表</span>#}
+                            {#                            </a></li>#}
+                            {#                            <li><a href="">#}
+                            {#                                <span><i class="glyphicon glyphicon-pencil"></i></span><span>调查问卷</span>#}
+                            {#                            </a></li>#}
+                            <li><a href="javascript:void(0)" id="set_clic1">
+                                <span><i class="glyphicon glyphicon-cog" ></i></span><span>设置</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view_bar comment_div" id="cm">
+
+                <div id="header_fill">
+                    <div id="tar_path">
+                        <span id="nav_path_one">{{ nav_path.nav_path_one }}</span>
+                        <span id="nav_path_two">{{ nav_path.nav_path_two }}</span>
+                        <span id="nav_path_three">{{ nav_path.nav_path_three }}</span>
+                    </div>
+
+                </div>
+                <div id="nav_tc"></div>
+                <article>
+                    <div id="ajcr">
+
+
+                        {% block article %}
+
+                        {% endblock %}
+                    </div>
+                </article>
+            </div>
+        </div>
+    </nav>
+
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }}
+    <nav id="maodian">
+        <div class="footer_div nav_hadder_w">
+            <div class="footerdiv">
+                <div id="nav_t">
+                    这是一个基于深度学习的人脸识别考勤系统设计与开发
+                </div>
+
+                <div class="nav_v">
+                    <div class="nav_w">
+                        <span>作者：</span><span>陈瀛龙</span>
+                    </div>
+                     <div class="nav_w">
+                        <span>班级：</span><span>计科升2016-03</span>
+                    </div>
+                     <div class="nav_w">
+                        <span>导师：</span><span>祝华正</span>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+
+
+
+{% endblock %}
+
+
+
+{% block ext_js %}
+    {{ block.super }}
+<script src="{% static 'js/app_basic.js' %}"></script>
+{% endblock %}
+

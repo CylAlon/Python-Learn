@@ -1,0 +1,228 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>personinfo</title>
+    <link href="{% static 'css/app_statement.css' %}" rel="stylesheet" type="text/css"/>
+    <script src="{% static 'js/app_statement.js' %}"></script>
+</head>
+<body>
+<div id="topsp"></div>
+
+
+<span class="ti">个人出勤状况：</span><br/>
+<div id="showtb">
+    <form action="" method="post" id="xzxs">
+        {% csrf_token %}
+        <div id="stb">
+            <table class="kqtab">
+                <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>
+                        <select class="bbxz" id="bb_1">
+
+                            <option selected="selected">请选择课程</option>
+
+                        </select>
+                    </th>
+                    <th>
+                        教师
+                    </th>
+                    <th>
+                        <select class="bbxz" id="bb_2">
+
+                            <option selected="selected">请选择周数</option>
+
+                        </select>
+                    </th>
+                    <th>
+                        <select class="bbxz" id="bb_3">
+
+                            <option selected="selected">请选择周几</option>
+
+                        </select>
+                    </th>
+                    <th><select class="bbxz" id="bb_4">
+
+                        <option selected="selected">请选择课数</option>
+
+                    </select></th>
+                    <th>
+                        <select class="bbxz" id="bb_5">
+
+                            <option selected="selected">请选择状态</option>
+
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div id="tbbu">
+                <button class="btn btn-primary" type="button" id="nextpage">上一页</button>
+                <button class="btn btn-primary" type="button" id="lastpage">下一页</button>
+            </div>
+            <div class="tbu" id="tbbu" >
+                <a href="{% url 'app_statement:show_print' %}">打印报表</a>
+            </div>
+
+        </div>
+
+
+    </form>
+
+</div>
+
+
+
+</body>
+</html>

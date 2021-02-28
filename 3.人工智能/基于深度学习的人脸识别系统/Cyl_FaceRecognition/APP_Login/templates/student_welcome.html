@@ -1,0 +1,39 @@
+{% extends 'base_model_main.html' %}
+{% load static %}
+{% block ext_css %}
+    {{ block.super }}
+    <link href="{% static 'css/app_welcome.css' %}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+
+
+{% block article %}
+    {{ block.super }}
+    <br/><span class="t1">请选择课程查看自己的考勤情况图解：</span><br/><br/>
+    <form action="" method="post" id="xzkc2">
+        {% csrf_token %}
+        <select class="xzkc1" id="ff_1">
+
+            <option selected="selected">请选择课程</option>
+
+        </select>
+    </form>
+
+    <div id="imtl">
+
+
+    </div>
+
+
+
+
+
+{% endblock %}
+
+{% block ext_js %}
+    {{ block.super }}
+    <script src="{% static 'js/app_welcome_stu.js' %}"></script>
+{% endblock %}
+
+
+

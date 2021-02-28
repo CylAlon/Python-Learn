@@ -1,0 +1,376 @@
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/***********************************************************************/
+/*头*/
+
+#nav_header {
+
+}
+
+.nav_hadder_w {
+    width: 100%;
+}
+
+.nav_hadder_h {
+    height: 75px;
+}
+
+.header_div {
+    /*height: 75px;*/
+    background: #2f333e;
+    position: fixed;
+    /*border: 1px red solid;*/
+
+}
+
+/*基于人脸识别系统的字*/
+#nav_header .nav_divide {
+    width: 50%;
+    /*border: 1px red solid;*/
+    float: left;
+}
+
+#nav_header .header_div {
+    color: white;
+}
+
+#nav_header .header_div a {
+    color: white;
+}
+
+/*填充*/
+.fill_nav {
+    z-index: 0;
+    /*width: 100%;*/
+    height: 75px;
+    background: black;
+    /*background: #2f333e;*/
+}
+
+/*基于人脸识别系统的字*/
+#nav_header .header_name {
+    width: 550px;
+    /*border: 1px yellow solid;*/
+    font-size: 25px;
+    text-align: center;
+    margin-left: 30px;
+    line-height: 69px;
+    font-family: 方正姚体;
+}
+
+/*图标*/
+
+#menu {
+    width: 350px;
+    height: 75px;
+    float: right;
+    margin-right: 30px;
+
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu ul li {
+    float: right;
+    line-height: 75px;
+    text-align: center;
+    position: relative;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 60px;
+    font-size: 14px;
+}
+
+#menu a:hover {
+    color: green;
+}
+
+/**/
+#menu ul li ul li {
+    float: none;
+    border-left: none;
+    color: black;
+    margin-top: 2px;
+    /*background-color: rgba(16, 16, 16, 0.57);*/
+    background: whitesmoke;
+}
+
+#menu ul li ul {
+    display: none;
+    width: 60px;
+    position: absolute;
+}
+
+#menu ul li:hover ul {
+    display: block;
+}
+
+/***********************************************************************/
+/*body*/
+
+/*.comment_div {*/
+/*    height: 1092px;*/
+
+/*    !*display: block;*!*/
+/*    !*border: 3px green solid;*!*/
+/*    !*position: fixed;*!*/
+
+/*    !**********************************!*/
+
+/*    !*font-size: 30px;*!*/
+/*    !*color: red;*!*/
+/*}*/
+
+/*菜单栏*/
+.menu_bar {
+
+    width: 290px;
+    height: 1092px;
+    /*border: 1px red solid;*/
+    /*float: left;*/
+    position: fixed;
+    background: whitesmoke;
+}
+
+/********/
+.menu_bar .menu_heard {
+    padding: 30px 15px;
+    display: flex;
+    align-items: center;
+
+    /*border: 1px red solid;*/
+}
+
+.menu_bar .menu_heard_img_div {
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+
+}
+
+.menu_bar .img_css {
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
+    /*border: 1px red solid;*/
+
+}
+
+.menu_bar .user_inf {
+    margin-left: 30px;
+}
+
+.menu_bar h1 {
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #333;
+    font-size: 18px;
+}
+
+/*.menus_div{*/
+/*    width: 100%;*/
+/*    height: 600px;*/
+/*    !*margin-top: 120px;*!*/
+/*    border: 3px black solid;*/
+/*}*/
+
+/*.menus_div{*/
+/*    padding: 15px 0;*/
+/*    display: block;*/
+/*}*/
+
+/***************************************/
+
+
+.menus_div {
+    width: 100%;
+    height: 600px;
+    float: right;
+
+}
+
+#menus_list_one {
+    width: 100%;
+    height: 500px;
+    /*border: 2px black solid;*/
+
+
+}
+
+#menus_list_one ul {
+    list-style: none;
+
+
+}
+
+#menus_list_one ul li {
+    /*float: left;*/
+    line-height: 45px;
+    /*text-align: center;*/
+    position: relative;
+    /*margin-left: 30px;*/
+
+    /*display: inline-block;*/
+
+    /*width: 1000px;*/
+    /*background: yellow;*/
+}
+
+#menus_list_one a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: #686a76;
+    font-size: 18px;
+}
+
+#menus_list_one a:hover {
+    color: white;
+    background: #796AEE;
+    border-left: 3px #3b25e6 solid;
+}
+
+
+.menus_div ul li span:nth-child(1) {
+    margin-left: 20px;
+}
+
+.menus_div ul li span:nth-child(2) {
+    margin-left: 20px;
+}
+
+.menus_div ul li span:nth-child(3) {
+    float: right;
+    font-size: 18px;
+    font-family: 华文琥珀;
+    margin-right: 10px;
+    /*font-family: 微软雅黑;*/
+}
+
+
+#hidden1, #hidden2, #hidden3, #hidden4, #hidden5, #hidden6, #hidden7, #hidden8 {
+    width: 100%;
+    /*height: 92px;*/
+    display: none;
+    /*border: 1px red solid;*/
+}
+
+#hidden1 ul li a span:nth-child(1),
+#hidden2 ul li a span:nth-child(1),
+#hidden3 ul li a span:nth-child(1),
+#hidden4 ul li a span:nth-child(1),
+#hidden5 ul li a span:nth-child(1),
+#hidden6 ul li a span:nth-child(1),
+#hidden7 ul li a span:nth-child(1),
+#hidden8 ul li a span:nth-child(1) {
+    margin-left: 25%;
+}
+
+#hidden1 ul li a span:nth-child(2),
+#hidden2 ul li a span:nth-child(2),
+#hidden3 ul li a span:nth-child(2),
+#hidden4 ul li a span:nth-child(2),
+#hidden5 ul li a span:nth-child(2),
+#hidden6 ul li a span:nth-child(2),
+#hidden7 ul li a span:nth-child(2),
+#hidden8 ul li a span:nth-child(2) {
+    margin-left: 10px;
+}
+
+#refr {
+    height: 1092px;
+    margin-left: 295px;
+    background: #DDE2E1;
+    border: 1px red solid;
+}
+
+
+/*.menus_div .span1{*/
+/*    margin-left: 20px;*/
+/*}*/
+/*.menus_div .span2{*/
+/*    margin-left: 20px;*/
+/*}*/
+
+
+/*************************************/
+
+
+/***********************************************************************/
+/*尾*/
+/*尾巴*/
+.footer_div {
+    /*margin-left: 300px;*/
+    height: 120px;
+    background: #2f333e;
+    /*border: 1px red solid;*/
+    z-index: 0;
+    /*position: fixed;*/
+    /*background: #2f333e;*/
+
+}
+
+.footer_div .footerdiv {
+    height: 60px;
+    margin-left: 300px;
+    /*border: 1px red solid;*/
+    background: #2f333e;
+    /*text-align: center;*/
+
+}
+#nav_t{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    color: wheat;
+}
+
+.nav_v{
+    float: right;
+}
+
+.nav_w{
+    width: 300px;
+    height: 25px;
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+
+/********************************/
+.nfs {
+    width: 300px;
+    height: 360px;
+    position: fixed;
+    margin-left: 40%;
+    margin-top: 250px;
+    display: none;
+    border: 3px white solid;
+    background: whitesmoke;
+    border-radius: 30px;
+    opacity: 0.8;
+}
+
+#fore {
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 60px 80px 60px;
+}
+#ffe {
+    padding: 10px 0 10px 10px;
+}

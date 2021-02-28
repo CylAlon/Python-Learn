@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/app_importdata.css' %}">
+
+</head>
+<body>
+<div id="import_camera">
+
+    <div id="ldi">
+        <div id="imgface">
+            <div id="face_bgm">
+
+            </div>
+        </div>
+        <br>
+        <h2 id="vah2"></h2>
+        <h3></h3>
+    </div>
+    <div id="iframe_div">
+
+        <iframe src="{{ ip }}" name="iframe"
+                scrolling="auto" content="IE=7; IE=9;IE=edge">
+        </iframe>
+    </div>
+    <div id="rdi">
+        <div id="fo">
+            <span>请选择信息</span><br/><br/>
+            <form action="" method="post" >
+                {% csrf_token %}
+
+                <select class="xlcd" name="course_table_sel1" id="se1">
+                    <option selected="selected">请选择学院</option>
+
+                </select><br/>
+                <select class="xlcd" name="course_table_sel2" id="se2">
+                    <option selected="selected">请选择专业</option>
+
+                </select><br/>
+                <select class="xlcd" name="course_table_sel3" id="se3">
+                    <option selected="selected">请选择班级</option>
+
+                </select><br/>
+
+                <div id="bu">
+                    <button type="submit" class="btn btn-primary" id="face_cl_button">确定</button>
+                    <button class="btn btn-danger" type="button" id="qc_button">清除</button>
+                    <p id="errinf">&nbsp;</p>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <nav>
+        <ul class="pager">
+            <li><a href="" id="xz1">上一个</a></li>
+            <li><a href="" id="paizao">拍照</a></li>
+            <li><a href="" id="xz2">下一个</a></li>
+            <p id="erran" style="color: red">&nbsp;</p>
+        </ul>
+
+    </nav>
+</div>
+
+</body>
+<script src="{% static 'js/updata.js' %}"></script>
+<script>
+
+
+</script>
+</html>

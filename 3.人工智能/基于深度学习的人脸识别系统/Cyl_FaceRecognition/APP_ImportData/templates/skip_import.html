@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/app_importdata.css' %}">
+</head>
+<body>
+<div class="fc">
+    <div id="tc">
+
+    </div>
+    <div class="nfc">
+
+        <form action="{% url 'app_import:admin_info' %}" method="post" id="for">
+            {% csrf_token %}
+            <span>添加管理员</span><br/><br/><br/>
+            账号：<input type="text" name="admin_number" id="admin_number"><br/><br/>
+            密码：<input type="text" name="admin_passwd" id="admin_passwd"><br/><br/>
+
+            <div class="col-md-12">
+                <div class="form-group" id="ff">
+                    <button type="submit" class="btn btn-primary" id="tj_button">提交</button>
+                    <button class="btn btn-danger" type="button" id="gb_button">关闭</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+<div class="app_import_add">
+
+    <form action="{% url 'app_import:college_info' %}" method="post" enctype="multipart/form-data" class="bu_fi">
+        {% csrf_token %}
+        <table class="myTable">
+            <tr>
+                <td>学院信息导入</td>
+                <td>
+                    <input type="file" name="college_file" id="college_file">
+                </td>
+                <td><input type="submit" id="college_button" class="btn btn-primary"></td>
+                <td id="td_coll"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="app_import_add">
+    <form action="{% url 'app_import:teacher_info' %}" method="post" enctype="multipart/form-data" class="bu_fi">
+        {% csrf_token %}
+        <table class="myTable">
+            <tr>
+                <td>教师信息导入</td>
+                <td>
+                    <input type="file" name="teacher_file" id="teacher_file">
+                </td>
+                <td><input type="submit" name="teacher_button" id="teacher_button" class="btn btn-primary"></td>
+                <td id="td_teacher"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="app_import_add">
+    <form action="{% url 'app_import:specialty_info' %}" method="post" enctype="multipart/form-data" class="bu_fi">
+        {% csrf_token %}
+        <table class="myTable">
+            <tr>
+                <td>专业信息导入</td>
+                <td>
+                    <input type="file" name="specialty_file" id="specialty_file">
+                </td>
+                <td><input type="submit" name="specialty_button" id="specialty_button" class="btn btn-primary"></td>
+                <td id="td_sp"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div class="app_import_add">
+
+    <table class="myTable">
+
+        <tr>
+            <td>添加管理员</td>
+            <td>
+                <button id="admin_button" class="btn btn-primary">添加管理员</button>
+            </td>
+            <td id="td_admin"></td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="app_import_add">
+
+    <form action="{% url 'app_import:class_info' %}" method="post" enctype="multipart/form-data" class="bu_fi">
+        {% csrf_token %}
+        <table class="myTable">
+            <tr>
+                <td>班级信息导入</td>
+                <td>
+                    <input type="file" name="class_file" id="class_file">
+                </td>
+                <td><input type="submit" name="class_button" id="class_button" class="btn btn-primary"></td>
+                <td id="td_class"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="app_import_add">
+
+    <form action="{% url 'app_import:student_info' %}" method="post" enctype="multipart/form-data" class="bu_fi">
+        {% csrf_token %}
+        <table class="myTable">
+            <tr>
+                <td>学生信息导入</td>
+                <td>
+                    <input type="file" name="student_file" id="student_file">
+                </td>
+                <td><input type="submit" id="student_button" class="btn btn-primary" class="btn btn-primary"></td>
+                <td id="td_stu"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="app_import_add">
+
+    <form action="{% url 'app_import:course_info' %}" method="post" enctype="multipart/form-data" class="bu_fi">
+        {% csrf_token %}
+        <table class="myTable">
+            <tr>
+                <td>课程信息导入</td>
+                <td>
+                    <input type="file" name="course_file" id="course_file">
+                </td>
+                <td><input type="submit" name="course_button" id="course_button" class="btn btn-primary"></td>
+                <td id="td_course"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="app_import_add">
+
+    <form action="" method="post" enctype="multipart/form-data" class="bu_fi">
+        {% csrf_token %}
+        <table class="myTable">
+            <tr>
+                <td>课程表信息导入</td>
+                <td>
+                    <input type="file" name="course_table_file" id="course_table_file">
+                </td>
+                <td><input type="submit" name="course_table_button" id="course_table_button" class="btn btn-primary"></td>
+                <td id="td_table_course"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script src="{% static 'js/updata.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>skip_welcome</title>
+</head>
+<body>
+ <div style="width: 800px;height: 100px; border: 0 red solid;margin: 30px auto">
+     <span style="font-family: 华文新魏;font-size: 25px;">你不属于<span style="color: blue">{{ userinfo }}</span>用户体系，你没有权限访问并查看该页面!!</span>
+
+ </div>
+    <script>
+        $(".comment_div").css("height", "810px");
+        $(document).ready(function () {
+            $(function () {
+                $.post('/app_login/skip_welcome/', {
+                    "skip_welcome": "0",
+            },
+                function (data, status) {
+                    alert('你没有权限访问并查看该页面！！')
+                });
+            });
+        });
+
+    </script>
+
+</body>
+</html>
