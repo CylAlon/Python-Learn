@@ -20,6 +20,7 @@ This is a repository of things to learn about Python, from Python basics to AI.U
 #### [2.11 翻译](2.爬虫/翻译)
         基于resquests。
 ## [3.人工智能](3.人工智能)  
+
 #### [3.1 人脸识别系统](3.人工智能/基于深度学习的人脸识别系统)
         后端框架使用了Django,深度学习库使用了Keras,图像采集使用了树莓派搭建的视频流,图像处理使用到了OpenCV。
         代码中修改了MTCNN和FACENET相关的部分代码复现，参考原作者@bubbliiiing的github地址：https://github.com/bubbliiiing/keras-face-recognition。
