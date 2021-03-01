@@ -1,0 +1,1441 @@
+2021-03-01 18:45:25 [scrapy.utils.log] INFO: Scrapy 2.4.1 started (bot: imooc_scrapy)
+2021-03-01 18:45:25 [scrapy.utils.log] INFO: Versions: lxml 4.6.2.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.9 (default, Aug 31 2020, 17:10:11) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.1, Platform Windows-10-10.0.19041-SP0
+2021-03-01 18:45:25 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'imooc_scrapy',
+ 'LOG_ENABLED': False,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'imooc_scrapy.spiders',
+ 'SPIDER_MODULES': ['imooc_scrapy.spiders']}
+2021-03-01 18:45:25 [scrapy.extensions.telnet] INFO: Telnet Password: e43674630feddbb7
+2021-03-01 18:45:25 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-03-01 18:45:25 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'imooc_scrapy.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-03-01 18:45:25 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-03-01 18:45:25 [scrapy.middleware] INFO: Enabled item pipelines:
+['imooc_scrapy.pipelines.ImoocScrapyPipeline']
+2021-03-01 18:45:25 [scrapy.core.engine] INFO: Spider opened
+2021-03-01 18:45:25 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-03-01 18:45:25 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-03-01 18:45:28 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/newandroid> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 51, in parse_mess
+    response.xpath('//*[@id="commonfixnav"]/div[1]/div[2]/span[1]/em/text()').extract_first()+\
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+2021-03-01 18:46:25 [scrapy.extensions.logstats] INFO: Crawled 1057 pages (at 1057 pages/min), scraped 1022 items (at 1022 items/min)
+2021-03-01 18:46:28 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-03-01 18:46:28 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 556898,
+ 'downloader/request_count': 1102,
+ 'downloader/request_method_count/GET': 1102,
+ 'downloader/response_bytes': 13374315,
+ 'downloader/response_count': 1102,
+ 'downloader/response_status_count/200': 1101,
+ 'downloader/response_status_count/302': 1,
+ 'dupefilter/filtered': 376,
+ 'elapsed_time_seconds': 62.469592,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 3, 1, 10, 46, 28, 161531),
+ 'item_scraped_count': 1069,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 11,
+ 'request_depth_max': 4,
+ 'response_received_count': 1101,
+ 'scheduler/dequeued': 1102,
+ 'scheduler/dequeued/memory': 1102,
+ 'scheduler/enqueued': 1102,
+ 'scheduler/enqueued/memory': 1102,
+ 'spider_exceptions/TypeError': 1,
+ 'start_time': datetime.datetime(2021, 3, 1, 10, 45, 25, 691939)}
+2021-03-01 18:46:28 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-03-01 18:50:59 [scrapy.utils.log] INFO: Scrapy 2.4.1 started (bot: imooc_scrapy)
+2021-03-01 18:50:59 [scrapy.utils.log] INFO: Versions: lxml 4.6.2.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.9 (default, Aug 31 2020, 17:10:11) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.1, Platform Windows-10-10.0.19041-SP0
+2021-03-01 18:50:59 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'imooc_scrapy',
+ 'LOG_ENABLED': False,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'imooc_scrapy.spiders',
+ 'SPIDER_MODULES': ['imooc_scrapy.spiders']}
+2021-03-01 18:50:59 [scrapy.extensions.telnet] INFO: Telnet Password: 10743d2101be6f38
+2021-03-01 18:50:59 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-03-01 18:50:59 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'imooc_scrapy.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-03-01 18:50:59 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-03-01 18:50:59 [scrapy.middleware] INFO: Enabled item pipelines:
+['imooc_scrapy.pipelines.ImoocScrapyPipeline']
+2021-03-01 18:50:59 [scrapy.core.engine] INFO: Spider opened
+2021-03-01 18:50:59 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-03-01 18:50:59 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-03-01 18:51:02 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-03-01 18:51:02 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7387,
+ 'downloader/request_count': 15,
+ 'downloader/request_method_count/GET': 15,
+ 'downloader/response_bytes': 401862,
+ 'downloader/response_count': 15,
+ 'downloader/response_status_count/200': 15,
+ 'dupefilter/filtered': 210,
+ 'elapsed_time_seconds': 2.963221,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 3, 1, 10, 51, 2, 869463),
+ 'item_scraped_count': 14,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 2,
+ 'response_received_count': 15,
+ 'scheduler/dequeued': 15,
+ 'scheduler/dequeued/memory': 15,
+ 'scheduler/enqueued': 15,
+ 'scheduler/enqueued/memory': 15,
+ 'start_time': datetime.datetime(2021, 3, 1, 10, 50, 59, 906242)}
+2021-03-01 18:51:02 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-03-01 18:52:50 [scrapy.utils.log] INFO: Scrapy 2.4.1 started (bot: imooc_scrapy)
+2021-03-01 18:52:50 [scrapy.utils.log] INFO: Versions: lxml 4.6.2.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.9 (default, Aug 31 2020, 17:10:11) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.1, Platform Windows-10-10.0.19041-SP0
+2021-03-01 18:52:50 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'imooc_scrapy',
+ 'LOG_ENABLED': False,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'imooc_scrapy.spiders',
+ 'SPIDER_MODULES': ['imooc_scrapy.spiders']}
+2021-03-01 18:52:50 [scrapy.extensions.telnet] INFO: Telnet Password: 84c306bc7e69a4ed
+2021-03-01 18:52:50 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-03-01 18:52:51 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'imooc_scrapy.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-03-01 18:52:51 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-03-01 18:52:51 [scrapy.middleware] INFO: Enabled item pipelines:
+['imooc_scrapy.pipelines.ImoocScrapyPipeline']
+2021-03-01 18:52:51 [scrapy.core.engine] INFO: Spider opened
+2021-03-01 18:52:51 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-03-01 18:52:51 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-03-01 18:52:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/go> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/datastructure> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/bigdata> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/webfullstack> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/dataanalysis> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/mobilearchitect> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:52 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/javafullstack> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/python2020> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/javaalmighty> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/fearchitect> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/java2020> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/fe2020> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/newandroid> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/javaarchitect> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:52:53 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-03-01 18:52:53 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7133,
+ 'downloader/request_count': 15,
+ 'downloader/request_method_count/GET': 15,
+ 'downloader/response_bytes': 401833,
+ 'downloader/response_count': 15,
+ 'downloader/response_status_count/200': 15,
+ 'elapsed_time_seconds': 2.582117,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 3, 1, 10, 52, 53, 601363),
+ 'log_count/ERROR': 14,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 1,
+ 'response_received_count': 15,
+ 'scheduler/dequeued': 15,
+ 'scheduler/dequeued/memory': 15,
+ 'scheduler/enqueued': 15,
+ 'scheduler/enqueued/memory': 15,
+ 'spider_exceptions/TypeError': 14,
+ 'start_time': datetime.datetime(2021, 3, 1, 10, 52, 51, 19246)}
+2021-03-01 18:52:53 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-03-01 18:53:39 [scrapy.utils.log] INFO: Scrapy 2.4.1 started (bot: imooc_scrapy)
+2021-03-01 18:53:39 [scrapy.utils.log] INFO: Versions: lxml 4.6.2.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.9 (default, Aug 31 2020, 17:10:11) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.1, Platform Windows-10-10.0.19041-SP0
+2021-03-01 18:53:39 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'imooc_scrapy',
+ 'LOG_ENABLED': False,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'imooc_scrapy.spiders',
+ 'SPIDER_MODULES': ['imooc_scrapy.spiders']}
+2021-03-01 18:53:39 [scrapy.extensions.telnet] INFO: Telnet Password: fdaa6dacf71c89d2
+2021-03-01 18:53:39 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-03-01 18:53:39 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'imooc_scrapy.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-03-01 18:53:39 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-03-01 18:53:39 [scrapy.middleware] INFO: Enabled item pipelines:
+['imooc_scrapy.pipelines.ImoocScrapyPipeline']
+2021-03-01 18:53:39 [scrapy.core.engine] INFO: Spider opened
+2021-03-01 18:53:39 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-03-01 18:53:39 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-03-01 18:53:42 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-03-01 18:53:42 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7390,
+ 'downloader/request_count': 15,
+ 'downloader/request_method_count/GET': 15,
+ 'downloader/response_bytes': 401843,
+ 'downloader/response_count': 15,
+ 'downloader/response_status_count/200': 15,
+ 'dupefilter/filtered': 210,
+ 'elapsed_time_seconds': 2.720116,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 3, 1, 10, 53, 42, 615633),
+ 'item_scraped_count': 14,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 2,
+ 'response_received_count': 15,
+ 'scheduler/dequeued': 15,
+ 'scheduler/dequeued/memory': 15,
+ 'scheduler/enqueued': 15,
+ 'scheduler/enqueued/memory': 15,
+ 'start_time': datetime.datetime(2021, 3, 1, 10, 53, 39, 895517)}
+2021-03-01 18:53:42 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-03-01 18:55:11 [scrapy.utils.log] INFO: Scrapy 2.4.1 started (bot: imooc_scrapy)
+2021-03-01 18:55:11 [scrapy.utils.log] INFO: Versions: lxml 4.6.2.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.9 (default, Aug 31 2020, 17:10:11) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.1, Platform Windows-10-10.0.19041-SP0
+2021-03-01 18:55:11 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'imooc_scrapy',
+ 'LOG_ENABLED': False,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'imooc_scrapy.spiders',
+ 'SPIDER_MODULES': ['imooc_scrapy.spiders']}
+2021-03-01 18:55:11 [scrapy.extensions.telnet] INFO: Telnet Password: a971b8b6e2bbe7fd
+2021-03-01 18:55:11 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-03-01 18:55:11 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'imooc_scrapy.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-03-01 18:55:11 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-03-01 18:55:11 [scrapy.middleware] INFO: Enabled item pipelines:
+['imooc_scrapy.pipelines.ImoocScrapyPipeline']
+2021-03-01 18:55:11 [scrapy.core.engine] INFO: Spider opened
+2021-03-01 18:55:11 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-03-01 18:55:11 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-03-01 18:55:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/go> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/dataanalysis> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/bigdata> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/mobilearchitect> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/javafullstack> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/datastructure> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/webfullstack> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/javaarchitect> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/fe2020> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/fearchitect> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/java2020> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/python2020> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/javaalmighty> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:14 [scrapy.core.scraper] ERROR: Spider error processing <GET https://class.imooc.com/sale/newandroid> (referer: https://class.imooc.com/)
+Traceback (most recent call last):
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 340, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\core\spidermw.py", line 62, in _evaluate_iterable
+    for r in iterable:
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\scrapy\spiders\crawl.py", line 116, in _parse_response
+    for request_or_item in iterate_spider_output(cb_res):
+  File "C:\1.MyFile\VScode\爬虫项目\imooc_scrapy\imooc_scrapy\spiders\imooc.py", line 52, in parse_mess
+    print(dur1['data'])
+  File "C:\1.MyFile\Software\Anaconda3\envs\PythonA\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+TypeError: list indices must be integers or slices, not str
+2021-03-01 18:55:14 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-03-01 18:55:14 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7140,
+ 'downloader/request_count': 15,
+ 'downloader/request_method_count/GET': 15,
+ 'downloader/response_bytes': 401844,
+ 'downloader/response_count': 15,
+ 'downloader/response_status_count/200': 15,
+ 'elapsed_time_seconds': 2.21268,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 3, 1, 10, 55, 14, 174539),
+ 'log_count/ERROR': 14,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 1,
+ 'response_received_count': 15,
+ 'scheduler/dequeued': 15,
+ 'scheduler/dequeued/memory': 15,
+ 'scheduler/enqueued': 15,
+ 'scheduler/enqueued/memory': 15,
+ 'spider_exceptions/TypeError': 14,
+ 'start_time': datetime.datetime(2021, 3, 1, 10, 55, 11, 961859)}
+2021-03-01 18:55:14 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-03-01 18:55:27 [scrapy.utils.log] INFO: Scrapy 2.4.1 started (bot: imooc_scrapy)
+2021-03-01 18:55:27 [scrapy.utils.log] INFO: Versions: lxml 4.6.2.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.9 (default, Aug 31 2020, 17:10:11) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.1, Platform Windows-10-10.0.19041-SP0
+2021-03-01 18:55:27 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'imooc_scrapy',
+ 'LOG_ENABLED': False,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'imooc_scrapy.spiders',
+ 'SPIDER_MODULES': ['imooc_scrapy.spiders']}
+2021-03-01 18:55:27 [scrapy.extensions.telnet] INFO: Telnet Password: 1697108b40dc6ef5
+2021-03-01 18:55:27 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-03-01 18:55:27 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'imooc_scrapy.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-03-01 18:55:27 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-03-01 18:55:27 [scrapy.middleware] INFO: Enabled item pipelines:
+['imooc_scrapy.pipelines.ImoocScrapyPipeline']
+2021-03-01 18:55:27 [scrapy.core.engine] INFO: Spider opened
+2021-03-01 18:55:27 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-03-01 18:55:27 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-03-01 18:55:29 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-03-01 18:55:29 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7124,
+ 'downloader/request_count': 15,
+ 'downloader/request_method_count/GET': 15,
+ 'downloader/response_bytes': 401854,
+ 'downloader/response_count': 15,
+ 'downloader/response_status_count/200': 15,
+ 'dupefilter/filtered': 210,
+ 'elapsed_time_seconds': 2.487462,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 3, 1, 10, 55, 29, 891648),
+ 'item_scraped_count': 14,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 2,
+ 'response_received_count': 15,
+ 'scheduler/dequeued': 15,
+ 'scheduler/dequeued/memory': 15,
+ 'scheduler/enqueued': 15,
+ 'scheduler/enqueued/memory': 15,
+ 'start_time': datetime.datetime(2021, 3, 1, 10, 55, 27, 404186)}
+2021-03-01 18:55:29 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-03-01 18:57:56 [scrapy.utils.log] INFO: Scrapy 2.4.1 started (bot: imooc_scrapy)
+2021-03-01 18:57:56 [scrapy.utils.log] INFO: Versions: lxml 4.6.2.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.9 (default, Aug 31 2020, 17:10:11) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.1, Platform Windows-10-10.0.19041-SP0
+2021-03-01 18:57:56 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'imooc_scrapy',
+ 'LOG_ENABLED': False,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'imooc_scrapy.spiders',
+ 'SPIDER_MODULES': ['imooc_scrapy.spiders']}
+2021-03-01 18:57:56 [scrapy.extensions.telnet] INFO: Telnet Password: e0adc94ec14011de
+2021-03-01 18:57:56 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-03-01 18:57:56 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'imooc_scrapy.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-03-01 18:57:56 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-03-01 18:57:56 [scrapy.middleware] INFO: Enabled item pipelines:
+['imooc_scrapy.pipelines.ImoocScrapyPipeline']
+2021-03-01 18:57:56 [scrapy.core.engine] INFO: Spider opened
+2021-03-01 18:57:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-03-01 18:57:56 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-03-01 18:57:59 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-03-01 18:57:59 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7140,
+ 'downloader/request_count': 15,
+ 'downloader/request_method_count/GET': 15,
+ 'downloader/response_bytes': 401864,
+ 'downloader/response_count': 15,
+ 'downloader/response_status_count/200': 15,
+ 'dupefilter/filtered': 210,
+ 'elapsed_time_seconds': 2.668901,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 3, 1, 10, 57, 59, 14318),
+ 'item_scraped_count': 14,
+ 'log_count/INFO': 10,
+ 'request_depth_max': 2,
+ 'response_received_count': 15,
+ 'scheduler/dequeued': 15,
+ 'scheduler/dequeued/memory': 15,
+ 'scheduler/enqueued': 15,
+ 'scheduler/enqueued/memory': 15,
+ 'start_time': datetime.datetime(2021, 3, 1, 10, 57, 56, 345417)}
+2021-03-01 18:57:59 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-03-01 18:58:54 [scrapy.utils.log] INFO: Scrapy 2.4.1 started (bot: imooc_scrapy)
+2021-03-01 18:58:54 [scrapy.utils.log] INFO: Versions: lxml 4.6.2.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.9 (default, Aug 31 2020, 17:10:11) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1i  8 Dec 2020), cryptography 3.3.1, Platform Windows-10-10.0.19041-SP0
+2021-03-01 18:58:54 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'imooc_scrapy',
+ 'LOG_ENABLED': False,
+ 'LOG_FILE': 'log.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'imooc_scrapy.spiders',
+ 'SPIDER_MODULES': ['imooc_scrapy.spiders']}
+2021-03-01 18:58:54 [scrapy.extensions.telnet] INFO: Telnet Password: 64eff4f1157454ab
+2021-03-01 18:58:54 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-03-01 18:58:54 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'imooc_scrapy.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-03-01 18:58:54 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-03-01 18:58:54 [scrapy.middleware] INFO: Enabled item pipelines:
+['imooc_scrapy.pipelines.ImoocScrapyPipeline']
+2021-03-01 18:58:54 [scrapy.core.engine] INFO: Spider opened
+2021-03-01 18:58:54 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-03-01 18:58:54 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-03-01 18:59:54 [scrapy.extensions.logstats] INFO: Crawled 1038 pages (at 1038 pages/min), scraped 1004 items (at 1004 items/min)
+2021-03-01 18:59:59 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-03-01 18:59:59 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 557974,
+ 'downloader/request_count': 1102,
+ 'downloader/request_method_count/GET': 1102,
+ 'downloader/response_bytes': 13374203,
+ 'downloader/response_count': 1102,
+ 'downloader/response_status_count/200': 1101,
+ 'downloader/response_status_count/302': 1,
+ 'dupefilter/filtered': 391,
+ 'elapsed_time_seconds': 64.743811,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 3, 1, 10, 59, 59, 513786),
+ 'item_scraped_count': 1070,
+ 'log_count/INFO': 11,
+ 'request_depth_max': 5,
+ 'response_received_count': 1101,
+ 'scheduler/dequeued': 1102,
+ 'scheduler/dequeued/memory': 1102,
+ 'scheduler/enqueued': 1102,
+ 'scheduler/enqueued/memory': 1102,
+ 'start_time': datetime.datetime(2021, 3, 1, 10, 58, 54, 769975)}
+2021-03-01 18:59:59 [scrapy.core.engine] INFO: Spider closed (finished)
